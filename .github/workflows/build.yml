@@ -20,6 +20,12 @@ jobs:
       - name: Archive loader image
         uses: actions/upload-artifact@v2
         with:
-          name: loader image
+          name: redpill-DS918+_7.0-loader
           path: redpill-load/images/redpill-DS918+_7.0-41890.img.txz
+
+      - name: Archive loader image
+        uses: actions/upload-artifact@v2
+        with:
+          name: redpill-DS3615xs_7.0-loader
+          path: redpill-load/images/redpill-DS3615xs_7.0-41222.img.txz
 
