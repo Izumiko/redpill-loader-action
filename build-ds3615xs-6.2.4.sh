@@ -21,6 +21,7 @@ tar -xf ../linux-3.10.x.txz
 cd linux-3.10*
 linuxsrc=`pwd`
 cp synoconfigs/bromolow .config
+sed -i 's/   -std=gnu89/   -std=gnu89 -fno-pie/' Makefile
 make oldconfig ; make modules_prepare
 cd ..
 make LINUX_SRC=${linuxsrc}
