@@ -3,6 +3,10 @@
 # prepare build tools
 sudo apt-get update && sudo apt-get install --yes --no-install-recommends ca-certificates build-essential git libssl-dev curl cpio bspatch vim gettext bc bison flex dosfstools kmod jq
 
+# download redpill
+git clone --depth=1 https://github.com/RedPill-TTG/redpill-lkm.git
+git clone --depth=1 https://github.com/RedPill-TTG/redpill-load.git
+
 # download syno toolkit
 curl --location "https://sourceforge.net/projects/dsgpl/files/toolkit/DSM7.0/ds.apollolake-7.0.dev.txz/download" --output ds.apollolake-7.0.dev.txz
 
@@ -17,6 +21,6 @@ read -a KVERS <<< "$(sudo modinfo --field=vermagic redpill-lkm/redpill.ko)" && c
 # build redpill-load
 cp user_config.json redpill-load/
 cd redpill-load
-./build-loader.sh 'DS918+' '7.0-41890'
+sudo ./build-loader.sh 'DS918+' '7.0-41890'
 cd images
 tar -cJf redpill-DS918+_7.0-41890.img.txz redpill-DS918+_7.0-41890*.img

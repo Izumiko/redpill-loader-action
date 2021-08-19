@@ -1,6 +1,0 @@
-[submodule "redpill-lkm"]
-	path = redpill-lkm
-	url = https://github.com/RedPill-TTG/redpill-lkm.git
-[submodule "redpill-load"]
-	path = redpill-load
-	url = https://github.com/RedPill-TTG/redpill-load.git
