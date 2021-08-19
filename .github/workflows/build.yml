@@ -1,0 +1,25 @@
+name: Build RedPill loader for DSM 7.0
+
+on: workflow_dispatch
+
+jobs:
+  redpill:
+    runs-on: ubuntu-latest
+    name: Build RedPill lkm and load
+    steps:
+      - uses: actions/checkout@v2.1.0
+        name: checkout src
+        id: checkout
+        with:
+          submodules: 'true'
+      - name: Compile
+        id: compile
+        run: |
+            bash build.sh
+
+      - name: Archive loader image
+        uses: actions/upload-artifact@v2
+        with:
+          name: loader image
+          path: redpill-load/images/redpill-DS918+_7.0-41890.img.txz
+
