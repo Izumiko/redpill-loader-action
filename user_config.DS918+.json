@@ -4,5 +4,9 @@
     "pid": "0x0001",
     "sn": "1350PDN001692",
     "mac1": "001132C7065E"
+  },
+  "synoinfo": {
+    "supportsystemperature": "no",
+    "supportsystempwarning": "no"
   }
 }
