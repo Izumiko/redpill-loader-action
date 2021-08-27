@@ -28,7 +28,5 @@ cd ..
 cd redpill-load
 cp ${root}/user_config.DS918+.json ./user_config.json
 sudo ./build-loader.sh 'DS918+' '7.0-41890'
-cd images
-tar -cJf redpill-DS918+_7.0-41890.img.txz redpill-DS918+_7.0-41890*.img
-mv *.txz ${root}/output/
+mv images/redpill-DS918+_7.0-41890*.img ${root}/output/
 cd ${root}
