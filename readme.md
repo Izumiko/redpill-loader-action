@@ -2,6 +2,10 @@
 
 DS918+ & DS3615xs DSM 6.2.4/7.0 loader
 
+[RedPill-TTG/redpill-lkm](https://github.com/RedPill-TTG/redpill-lkm)
+
+[RedPill-TTG/redpill-load](https://github.com/RedPill-TTG/redpill-load)
+
 Built loader images are stored at actions/artifact
 
 
